@@ -78,6 +78,20 @@ $(function () {
   });
 });
 
+$(window).on('scroll', function() {
+  var scrollPosition = $(window).scrollTop(); // 現在のスクロール位置
+  var windowHeight = $(window).height(); // ビューポートの高さ
+  var threshold = 1.7 * windowHeight; // 200vh
+
+  if (scrollPosition > threshold) {
+    // スクロール位置がビューポートの高さを超えた場合
+    $('#news').addClass('hidden');
+  } else {
+    // スクロール位置がビューポートの高さ以下の場合
+    $('#news').removeClass('hidden');
+  }
+});
+
 // タイトルfadein
 document.addEventListener('scroll', function() {
   var title = document.querySelector('.title');
@@ -91,3 +105,33 @@ document.addEventListener('scroll', function() {
     title.classList.remove('visible');
   }
 });
+
+// モーダルを開く関数
+document.querySelectorAll('.openModalButton').forEach(button => {
+  button.onclick = function(event) {
+    event.preventDefault(); // デフォルトのリンク動作をキャンセル
+    const modalId = this.getAttribute('data-modal');
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // スクロールを無効にする
+  }
+});
+
+// モーダルを閉じる関数
+document.querySelectorAll('.close-button').forEach(button => {
+  button.onclick = function() {
+    const modalId = this.getAttribute('data-modal');
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // スクロールを有効に戻す
+  }
+});
+
+// モーダルの外側をクリックして閉じる
+window.onclick = function(event) {
+  if (event.target.classList.contains('modal')) {
+    const modal = event.target;
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // スクロールを有効に戻す
+  }
+}
