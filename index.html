@@ -8,7 +8,11 @@
   <link rel="icon" href="image/PC/favicon.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
   <!-- Add the slick-theme.css if you want default styling -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -43,7 +47,25 @@
             <img src="image/PC/search.png">
           </a>
         </div>
+        <div class="search-box" id="search-box">
+          <input type="text" placeholder="Search...">
+        </div>
       </div>
+      <!-- SP用メニューボタン -->
+      <div class="openbtn">
+        <span></span>
+        <span></span>
+      </div>
+      <!-- SP用メニューリスト -->
+      <nav id="nav-sp">
+        <ul class="nav-menu-sp">
+          <li><a href="product.html">PRODUCT</a></li>
+          <li><a href="shopping.html">SHOPPING</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="news.html">NEWS</a></li>
+        </ul>
+      </nav>
+
     </div>
   </div>
   <!-- /Header -->
@@ -51,6 +73,7 @@
   <main>
     <!-- main-visual -->
     <section id="main-visual">
+      <!-- PCメインビジュアル -->
       <div class="main-visual">
         <div class="fv">
           <img src="image/PC/FV-img01.jpg" alt="">
@@ -63,6 +86,21 @@
         </div>
         <div class="fv">
           <img src="image/PC/FV-img04.jpg" alt="">
+        </div>
+      </div>
+      <!-- SPメインビジュアル -->
+      <div class="main-visual-sp">
+        <div class="fv">
+          <img src="image/SP/FV-img01.jpg">
+        </div>
+        <div class="fv">
+          <img src="image/SP/FV-img02.jpg">
+        </div>
+        <div class="fv">
+          <img src="image/SP/FV-img03.jpg">
+        </div>
+        <div class="fv">
+          <img src="image/SP/FV-img04.jpg">
         </div>
       </div>
 
@@ -93,7 +131,7 @@
       <!-- title -->
       <div class="title">
         <h1>
-          未来のために<span></span>サステナブルに<br>
+          未来のためにサステナブルに<br>
           Eco for the future
         </h1>
       </div> <!-- /title -->
@@ -123,6 +161,9 @@
     <!-- shopping -->
     <section id="shopping">
       <div class="container">
+        <div class="category-title-sp">
+          <h2>BEAUTY</h2>
+        </div>
         <div class="container-left">
           <div class="container-img">
             <img src="image/PC/product(1).jpg" alt="化粧品">
@@ -154,6 +195,9 @@
         </div>
       </div>
       <div class="container reverse">
+        <div class="category-title-sp">
+          <h2>FASHION</h2>
+        </div>
         <div class="container-left">
           <div class="container-img">
             <img src="image/PC/product(2).jpg" alt="衣服">
@@ -185,6 +229,9 @@
         </div>
       </div>
       <div class="container">
+        <div class="category-title-sp">
+          <h2>FOOD</h2>
+        </div>
         <div class="container-left">
           <div class="container-img">
             <img src="image/PC/product(3).jpg" alt="食品">
@@ -267,42 +314,49 @@
           <img src="image/PC/logo.jpg">
         </a>
       </div>
-      <div class="footer-item">
-        <a href="product.html">
-          <h4>PRODUCTS</h4>
-        </a>
-        <ul>
-          <li>BEAUTY</li>
-          <li>FASHION</li>
-          <li>FOOD</li>
-        </ul>
+      <div class="footer-container">
+        <div class="footer-inner">
+          <div class="footer-item">
+            <a href="product.html">
+              <h4>PRODUCTS</h4>
+            </a>
+            <ul>
+              <li>BEAUTY</li>
+              <li>FASHION</li>
+              <li>FOOD</li>
+            </ul>
+          </div>
+          <div class="footer-item">
+            <a href="about.html">
+              <h4>ABOUT</h4>
+            </a>
+            <ul>
+              <li>私たちについて</li>
+              <li>会社概要</li>
+              <li>プライバシーポリシー</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-inner">
+          <div class="footer-item">
+            <a href="contact.html">
+              <h4>CONTACT</h4>
+            </a>
+            <ul>
+              <li>お問い合わせ</li>
+            </ul>
+          </div>
+          <div class="footer-item">
+            <h4>SNS</h4>
+            <ul>
+              <li>INSTAGRAM</li>
+              <li>X</li>
+              <li>FACEBOOK</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="footer-item">
-        <a href="about.html">
-          <h4>ABOUT</h4>
-        </a>
-        <ul>
-          <li>私たちについて</li>
-          <li>会社概要</li>
-          <li>プライバシーポリシー</li>
-        </ul>
-      </div>
-      <div class="footer-item">
-        <a href="contact.html">
-          <h4>CONTACT</h4>
-        </a>
-        <ul>
-          <li>お問い合わせ</li>
-        </ul>
-      </div>
-      <div class="footer-item">
-        <h4>SNS</h4>
-        <ul>
-          <li>INSTAGRAM</li>
-          <li>X</li>
-          <li>FACEBOOK</li>
-        </ul>
-      </div>
+
     </div>
     <p class="copyright">&copy; Eco Shop</p>
   </div>

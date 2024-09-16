@@ -1,3 +1,18 @@
+$(document).ready(function() {
+  // メニューボタンがクリックされたときの処理
+  $(".openbtn").click(function () {
+    $(this).toggleClass('active');
+    $('#nav-sp').toggleClass('panelactive');
+    $('.nav-menu-sp').toggleClass('panelactive');
+  });
+
+  // ナビメニュー内のリンクがクリックされたときの処理
+  $('#nav-sp a').click(function() {
+    $('.openbtn').removeClass('active');
+    $('#nav-sp').removeClass('panelactive');
+    $('.nav-menu-sp').removeClass('panelactive');
+  });
+});
 
 // スライダー設定
 $(function() {
@@ -10,20 +25,17 @@ $(function() {
     arrows: false,
     infinite: true,
   });
-  // プログレスバー設定
-
-  // スライドが切り替わるたびにプログレスバーをリセット
-  $('.top-carousel').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-    $('#js-progressBar').stop(true, true).css('width', '0%');
+});
+$(function() {
+  $('.main-visual-sp').slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
+    speed: 1500,
+    fade: true,
+    dots: false,
+    arrows: false,
+    infinite: true,
   });
-
-  // スライドが開始されたらプログレスバーをアニメーション
-  $('.top-carousel').on('afterChange', function(event, slick, currentSlide) {
-    $('#js-progressBar').animate({ width: '100%' }, 5000, 'linear');
-  });
-
-  // 初回スライドの開始時にプログレスバーをアニメーション
-  $('#js-progressBar').animate({ width: '100%'}, 5000, 'linear');
 });
 
 $(function () {
@@ -43,6 +55,15 @@ $(function () {
       pauseOnHover: false, // マウスホバーで一時停止OFF
       slidesToShow: 2,
       slidesToScroll: 2,
+      responsive: [
+        {
+          breakpoint: 769,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     })
     .on({
       // スライドが移動する前に発生するイベント
