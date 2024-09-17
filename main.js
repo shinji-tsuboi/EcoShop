@@ -2,14 +2,14 @@ $(document).ready(function() {
   // メニューボタンがクリックされたときの処理
   $(".openbtn").click(function () {
     $(this).toggleClass('active');
-    $('#nav-sp').toggleClass('panelactive');
+    $('.nav-sp').toggleClass('panelactive');
     $('.nav-menu-sp').toggleClass('panelactive');
   });
 
   // ナビメニュー内のリンクがクリックされたときの処理
-  $('#nav-sp a').click(function() {
+  $('.nav-sp a').click(function() {
     $('.openbtn').removeClass('active');
-    $('#nav-sp').removeClass('panelactive');
+    $('.nav-sp').removeClass('panelactive');
     $('.nav-menu-sp').removeClass('panelactive');
   });
 });
