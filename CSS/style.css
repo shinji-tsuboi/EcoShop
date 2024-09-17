@@ -1399,7 +1399,7 @@ span {
   }
 
   .shopping-image-sp::before {
-    content: "SHOPPING";
+    content: "SHOP";
     font-size: 60px;
     color: #fff;
     opacity: 0.9;
@@ -1731,6 +1731,7 @@ span {
     gap: 48px 40px;
     padding: 40px 0;
     border-top: 1px solid #b0b2af;
+    position: relative;
   }
 
   .news-img {
@@ -1738,15 +1739,13 @@ span {
     position: relative;
   }
 
-  .news-img p {
-    margin-top: 16px;
+  .news-img h2 {
+    margin-bottom: 24px;
   }
 
   .archive {
-    display: flex;
     flex-direction: column;
     width: 50%;
-    margin-top: 16px;
     position: relative;
   }
 
@@ -1767,21 +1766,99 @@ span {
     line-height: 2rem;
   }
 
+  .news-next {
+    position: relative;
+  }
+
   .news-btn {
     display: block;
-    align-self: flex-end;
-    text-align: center;
     margin-top: 24px;
-    justify-content: right;
     border: 1px solid #b0b2af;
     padding: 8px 36px;
     border-radius: 10px;
     color: #676767;
+    position: absolute;
+    bottom: -10px;
+    right: 20px;
   }
 
   .page-nation {
     margin-top: 64px;
     text-align: center;
+  }
+
+  /* SP表示 */
+
+  .news-image-sp {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .news-image {
+      display: none;
+    }
+
+    .news-image-sp {
+      display: block;
+    }
+
+    .news-image-sp::before {
+      content: "NEWS";
+      font-size: 60px;
+      color: #fff;
+      opacity: 0.9;
+      font-weight: 350;
+      letter-spacing: 0.2rem;
+      position: absolute;
+      top: 125px;
+      left: 45px;
+    }
+
+    .news-image-sp::after {
+      content: "ニュース";
+      font-size: 24px;
+      color: #fff;
+      opacity: 0.9;
+      letter-spacing: 0.2rem;
+      position: absolute;
+      top: 210px;
+      left: 45px;
+    }
+
+    #news-list {
+      flex-direction: column-reverse;
+    }
+
+    .category-list {
+      margin-top: 64px;
+    }
+
+    .news-inner {
+      flex-direction: column;
+      padding: 40px 0 80px 0;
+    }
+
+    .news-img {
+      width: 100%;
+    }
+
+    .archive {
+      width: 100%;
+    }
+
+    .news-btn {
+      bottom: -45px;
+      right: 10px;
+    }
+
+    .news-inner:last-child {
+      border-bottom: 1px solid #b0b2af;
+    }
+
+    .page-nation {
+      margin-top: 64px;
+      text-align: center;
+    }
   }
 
 /*---------------------------------
@@ -1804,6 +1881,28 @@ span {
 
 .archive-detail {
   width: 100%;
+}
+
+/* SP表示 */
+
+@media (max-width: 768px) {
+
+  .detail-category {
+    width: 100%;
+  }
+
+  .detail-inner {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .detail-img {
+    width: 100%;
+  }
+
+  .archive-detail {
+    width: 100%;
+  }
 }
 
 /*---------------------------------
