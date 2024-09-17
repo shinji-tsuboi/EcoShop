@@ -108,6 +108,7 @@ p {
 .right-area {
   display: flex;
   gap: 32px;
+  align-items: center;
 }
 
 .cart,
@@ -240,6 +241,7 @@ p {
 }
 
 .btn-area {
+  display: none;
   width: 84px;
   position: relative;
 }
@@ -256,6 +258,10 @@ p {
 }
 
 @media (max-width: 1024px) {
+  .btn-area {
+    display: block;
+  }
+
   .openbtn {
     display: block;
   }
@@ -368,12 +374,13 @@ p {
 
 .news-link {
   display: block;
+  position: relative;
 }
 
 .news {
-  position: fixed;
-  top: 700px;
-  left: 60px;
+  position: absolute;
+  top: 88%;
+  left: 5%;
   width: 500px;
   height: 400px;
   overflow: hidden;
@@ -384,8 +391,8 @@ p {
 @media (max-width: 1024px) {
   .news {
     position: fixed;
-    top: 1100px;
-    left: 60px;
+    top: 90%;
+    left: 5%;
     width: 500px;
     height: 400px;
     overflow: hidden;
@@ -398,8 +405,8 @@ p {
 @media (max-width: 768px) {
   .news {
     position: fixed;
-    top: 750px;
-    left: 60px;
+    top: 90%;
+    left: 5%;
     width: 500px;
     height: 400px;
     overflow: hidden;
@@ -535,7 +542,7 @@ span {
 }
 
 .category-title {
-  margin-top: 48px;
+  /* margin-top: 48px; */
   margin-left: 15%;
 }
 
@@ -595,13 +602,7 @@ span {
   display: none;
 }
 
-
-@media (max-width:1024px) {
-  .category-title-sp {
-    display: none;
-  }
-}
-
+/* SP表示 */
 @media (max-width:768px) {
 
   #shopping {
@@ -609,7 +610,7 @@ span {
   }
 
   .container {
-    margin-top: 0;
+    margin-top: 48px;
     flex-direction: column;
   }
 
