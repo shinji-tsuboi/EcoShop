@@ -774,7 +774,7 @@ span {
   }
 
   .footer-logo-area {
-    flex-direction: column-reverse;
+    flex-direction: column;
     gap: 32px;
   }
 
@@ -817,7 +817,7 @@ span {
 
 #vision {
   width: 100%;
-  margin-top: 160px;
+  margin-top: 240px;
   position: relative;
 }
 
@@ -834,7 +834,7 @@ span {
 .vision-inner {
   display: flex;
   padding: 0 30px;
-  gap: 30px;
+  gap: 30px;;
 }
 
 .vision-left {
@@ -863,7 +863,7 @@ span {
 .sustainable {
   width: 100%;
   padding: 0 30px;
-  margin-top: 160px;
+  margin-top: 240px;
   position: relative;
 }
 
@@ -897,7 +897,7 @@ span {
 }
 
 .company {
-  margin-top: 160px;
+  margin-top: 240px;
   padding: 0 30px;
   position: relative;
 }
@@ -933,6 +933,10 @@ span {
 /* SP表示 */
 
 .subpage-img-sp {
+  display: none;
+}
+
+.vision-title-sp {
   display: none;
 }
 
@@ -1329,7 +1333,7 @@ span {
 }
 
 .shopping-image::before {
-  content: "SHOPPING";
+  content: "SHOP";
   font-size: 88px;
   color: #fff;
   opacity: 0.9;
@@ -1352,7 +1356,7 @@ span {
 }
 
 .item-container {
-  margin-bottom: 64px;
+  margin-top: 120px;
 }
 
 .item-category {
@@ -1921,6 +1925,10 @@ span {
 　Contact Page
 ---------------------------------*/
 
+#contact {
+  margin-top: 160px;
+}
+
 .contact-image {
   position: relative;
 }
@@ -2017,6 +2025,30 @@ option {
   padding-right: 20px;
 }
 
+.contact-textarea {
+  width: 100%;
+  height: 140px;
+  border: 1px solid #808080;
+  padding: 10px;
+}
+
+.send {
+  display: inline-block;
+  border: solid 2px #96c519;
+  border-radius: 10px;
+  padding: 10px 60px;
+  color: #676767;
+  background-color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease 0s;
+}
+
+.send:hover {
+  color: #676767;
+  background-color: #fff;
+  transform: scale(1.2);
+}
+
 .wpforms-container textarea.wpforms-field-medium {
   width: 100%;
   height: 140px;
@@ -2072,6 +2104,112 @@ select {
   -webkit-appearance: none;
   appearance: none;
   color: #0000005C;
+}
+
+/* SP表示 */
+
+.contact-image-sp {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .contact-image {
+    display: none;
+  }
+
+  .contact-image-sp {
+    display: block;
+  }
+
+  .contact-image-sp::before {
+    content: "CONTACT";
+    font-size: 60px;
+    color: #fff;
+    opacity: 0.9;
+    font-weight: 350;
+    letter-spacing: 0.2rem;
+    position: absolute;
+    top: 125px;
+    left: 45px;
+  }
+
+  .contact-image-sp::after {
+    content: "お問い合わせ";
+    font-size: 24px;
+    color: #fff;
+    opacity: 0.9;
+    letter-spacing: 0.2rem;
+    position: absolute;
+    top: 210px;
+    left: 45px;
+  }
+
+  .contact-inner {
+    max-width: 752px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+}
+
+/*---------------------------------
+　thanks Page
+---------------------------------*/
+#contact-thanks {
+  margin-top: 160px;
+}
+
+.contact-thanks-inner {
+  max-width: 752px;
+  border: 2px solid #468459;
+  text-align: center;
+  margin: 32px auto 160px auto;
+  padding: 62px 100px;
+}
+
+.thanks-text {
+  width: 100%;
+}
+
+.thanks-text h3 {
+  width: 100%;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.thanks-text P {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+/* SP表示 */
+
+@media (max-width: 768px) {
+
+  #contact-thanks {
+    padding: 0 30px;
+  }
+
+  .contact-thanks-inner {
+    margin: 0 auto;
+    padding: 62px 30px;
+    text-wrap: balance;
+  }
+
+  .thanks-text {
+    width: 100%;
+  }
+
+  .thanks-text h3 {
+    width: 100%;
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .thanks-text P {
+    width: 100%;
+    margin-bottom: 32px;
+  }
 }
 
 /*---------------------------------
