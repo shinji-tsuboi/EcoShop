@@ -37,19 +37,22 @@
         </ul>
       </nav>
       <div class="right-area">
+        <div class="search" id="search-toggle">
+          <a href="javascript:void(0);">
+            <img src="image/PC/search.png" alt="検索">
+          </a>
+        </div>
+        <form action="#" class="search-form-pc" id="search-form">
+          <button type="submit" aria-label="検索"></button>
+          <label>
+            <input type="text" placeholder="キーワードを入力">
+          </label>
+        </form>
         <div class="cart">
           <a href="">
             <img src="image/PC/cart.png" alt="ショッピングカート">
           </a>
         </div>
-        <div class="search">
-          <a href="">
-            <img src="image/PC/search.png">
-          </a>
-        </div>
-        <!-- <div class="search-box" id="search-box">
-          <input type="text" placeholder="Search...">
-        </div> -->
       </div>
       <!-- SP用メニューボタン -->
       <div class="btn-area">
@@ -67,11 +70,15 @@
           <li><a href="news.html">NEWS</a></li>
           <li><a href="policy.html">POLICY</a></li>
           <li><a href="contact.html">CONTACT</a></li>
-          <li class="search-sp"><img src="image/PC/search.png">
-            <div class="search-box" id="search-box">
-              <input type="text" placeholder="Search...">
-            </div>
+          <li class="search-sp" id="search-toggle-sp">
+            <img src="image/PC/search.png" alt="検索">
           </li>
+          <form action="#" class="search-form-sp" id="search-form-sp">
+            <button type="submit" aria-label="検索"></button>
+            <label>
+              <input type="text" placeholder="キーワードを入力">
+            </label>
+          </form>
         </ul>
       </nav>
     </div>
@@ -82,7 +89,7 @@
     <!-- subpage-top -->
     <div class="product-head">
       <div class="contact-image">
-        <img src="image/PC/contact-head.jpg">
+        <img src="image/PC/contact-head.jpg" alt="お問い合わせ">
       </div>
       <div class="contact-image-sp">
         <img src="image/SP/contact-head.jpg">

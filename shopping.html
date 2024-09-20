@@ -37,19 +37,22 @@
         </ul>
       </nav>
       <div class="right-area">
+        <div class="search" id="search-toggle">
+          <a href="javascript:void(0);">
+            <img src="image/PC/search.png" alt="検索">
+          </a>
+        </div>
+        <form action="#" class="search-form-pc" id="search-form">
+          <button type="submit" aria-label="検索"></button>
+          <label>
+            <input type="text" placeholder="キーワードを入力">
+          </label>
+        </form>
         <div class="cart">
           <a href="">
             <img src="image/PC/cart.png" alt="ショッピングカート">
           </a>
         </div>
-        <div class="search">
-          <a href="">
-            <img src="image/PC/search.png">
-          </a>
-        </div>
-        <!-- <div class="search-box" id="search-box">
-          <input type="text" placeholder="Search...">
-        </div> -->
       </div>
       <!-- SP用メニューボタン -->
       <div class="btn-area">
@@ -67,11 +70,15 @@
           <li><a href="news.html">NEWS</a></li>
           <li><a href="policy.html">POLICY</a></li>
           <li><a href="contact.html">CONTACT</a></li>
-          <li class="search-sp"><img src="image/PC/search.png">
-            <div class="search-box" id="search-box">
-              <input type="text" placeholder="Search...">
-            </div>
+          <li class="search-sp" id="search-toggle-sp">
+            <img src="image/PC/search.png" alt="検索">
           </li>
+          <form action="#" class="search-form-sp" id="search-form-sp">
+            <button type="submit" aria-label="検索"></button>
+            <label>
+              <input type="text" placeholder="キーワードを入力">
+            </label>
+          </form>
         </ul>
       </nav>
     </div>
@@ -82,10 +89,10 @@
     <!-- subpage-top -->
     <div class="product-head">
       <div class="shopping-image">
-        <img src="image/PC/product-head.jpg">
+        <img src="image/PC/product-head.jpg" alt="ショップ">
       </div>
       <div class="shopping-image-sp">
-        <img src="image/SP/product-head.jpg">
+        <img src="image/SP/product-head.jpg" alt="ショップ">
       </div>
     </div>
     <!-- /subpage-top -->
@@ -118,9 +125,8 @@
             <!-- 商品リンク 1 -->
             <a href="#" class="openModalButton" data-modal="productModal1">
               <li class="item-box">
-                <img src="image/shop/item (1).jpg" alt="">
+                <img src="image/shop/item (1).jpg" alt="化粧品">
                 <h2>ピュアリーフスムースミルク</h2>
-                <p>乳液（エマルジョン）</p>
                 <p>&yen; 2,000 (税込み)</p>
               </li>
             </a>
@@ -135,11 +141,10 @@
                       <div class="container-img">
                         <img src="image/shop/item (1).jpg" alt="化粧品">
                       </div>
-                      <div class="item-head">
-                        <h2 class="item-category">organic cosmetics</h2>
+                      <div class="item-head head-beauty">
                         <h2 class="item-title">ピュアリーフスムースミルク</h2>
-                        <h3 class="item-type">乳液（エマルジョン）</h3>
-                        <h3 class="item-price">&yen; 2,000（税込み）</h3>
+                        <p class="item-type">乳液（エマルジョン）</p>
+                        <p class="item-price">&yen; 2,000（税込み）</p>
                       </div>
                     </div>
                     <div class="container-bottom">
@@ -200,7 +205,6 @@
               <li class="item-box">
                 <img src="image/shop/item (2).jpg" alt="">
                 <h2>グリーンレーヴフェイスクリーム</h2>
-                <p>フェイスクリーム</p>
                 <p>&yen; 2,000 (税込み)</p>
               </li>
             </a>
@@ -278,7 +282,6 @@
               <li class="item-box">
                 <img src="image/shop/item (3).jpg" alt="">
                 <h2>エコナチュール シャンプー</h2>
-                <p>シャンプー</p>
                 <p>&yen; 2,000 (税込み)</p>
               </li>
             </a>
@@ -366,7 +369,6 @@
               <li class="item-box">
                 <img src="image/shop/item (4).jpg" alt="">
                 <h2>ナチュラルカーディガン</h2>
-                <p>カーディガン</p>
                 <p>&yen; 2,000 (税込み)</p>
               </li>
             </a>
@@ -444,7 +446,6 @@
               <li class="item-box">
                 <img src="image/shop/item (5).jpg" alt="">
                 <h2>エコリーフ ハット</h2>
-                <p>帽子</p>
                 <p>&yen; 2,000 (税込み)</p>
               </li>
             </a>
@@ -522,7 +523,6 @@
               <li class="item-box">
                 <img src="image/shop/item (6).jpg" alt="">
                 <h2>ナチュラルフロー パンツ</h2>
-                <p>ズボン</p>
                 <p>&yen; 2,000 (税込み)</p>
               </li>
             </a>
@@ -610,7 +610,6 @@
               <li class="item-box">
                 <img src="image/shop/item (7).jpg" alt="">
                 <h2>エコスイート クッキー</h2>
-                <p>クッキー</p>
                 <p>&yen; 1,000 (税込み)</p>
               </li>
             </a>
@@ -688,7 +687,6 @@
               <li class="item-box">
                 <img src="image/shop/item (8).jpg" alt="">
                 <h2>ナチュラルカカオ チョコレート</h2>
-                <p>チョコレート</p>
                 <p>&yen; 1,000 (税込み)</p>
               </li>
             </a>
@@ -766,7 +764,6 @@
               <li class="item-box">
                 <img src="image/shop/item (9).jpg" alt="">
                 <h2>グランドリッチ コーヒー豆</h2>
-                <p>コーヒー豆</p>
                 <p>&yen; 1,000 (税込み)</p>
               </li>
             </a>

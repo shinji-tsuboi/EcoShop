@@ -37,19 +37,22 @@
         </ul>
       </nav>
       <div class="right-area">
+        <div class="search" id="search-toggle">
+          <a href="javascript:void(0);">
+            <img src="image/PC/search.png" alt="検索">
+          </a>
+        </div>
+        <form action="#" class="search-form-pc" id="search-form">
+          <button type="submit" aria-label="検索"></button>
+          <label>
+            <input type="text" placeholder="キーワードを入力">
+          </label>
+        </form>
         <div class="cart">
           <a href="">
             <img src="image/PC/cart.png" alt="ショッピングカート">
           </a>
         </div>
-        <div class="search">
-          <a href="">
-            <img src="image/PC/search.png">
-          </a>
-        </div>
-        <!-- <div class="search-box" id="search-box">
-          <input type="text" placeholder="Search...">
-        </div> -->
       </div>
       <!-- SP用メニューボタン -->
       <div class="btn-area">
@@ -67,11 +70,15 @@
           <li><a href="news.html">NEWS</a></li>
           <li><a href="policy.html">POLICY</a></li>
           <li><a href="contact.html">CONTACT</a></li>
-          <li class="search-sp"><img src="image/PC/search.png">
-            <div class="search-box" id="search-box">
-              <input type="text" placeholder="Search...">
-            </div>
+          <li class="search-sp" id="search-toggle-sp">
+            <img src="image/PC/search.png" alt="検索">
           </li>
+          <form action="#" class="search-form-sp" id="search-form-sp">
+            <button type="submit" aria-label="検索"></button>
+            <label>
+              <input type="text" placeholder="キーワードを入力">
+            </label>
+          </form>
         </ul>
       </nav>
     </div>
@@ -82,10 +89,10 @@
     <!-- subpage-top -->
     <div class="product-head">
       <div class="product-image">
-        <img src="image/PC/product-head.jpg">
+        <img src="image/PC/product-head.jpg" alt="商品種類">
       </div>
       <div class="product-image-sp">
-        <img src="image/SP/product-head.jpg">
+        <img src="image/SP/product-head.jpg" alt="商品種類">
       </div>
     </div>
     <!-- /subpage-top -->
@@ -152,7 +159,7 @@
         <div class="products-inner">
           <div class="products-left">
             <div class="products-img">
-              <img src="image/PC/product(1).jpg" alt="">
+              <img src="image/PC/product(1).jpg" alt="化粧品">
             </div>
           </div>
           <div class="products-right">
@@ -188,7 +195,7 @@
         <div class="products-inner reverse">
           <div class="products-left">
             <div class="products-img">
-              <img src="image/PC/product(2).jpg" alt="">
+              <img src="image/PC/product(2).jpg" alt="化粧品">
             </div>
           </div>
           <div class="products-right">
@@ -224,7 +231,7 @@
         <div class="products-inner">
           <div class="products-left">
             <div class="products-img">
-              <img src="image/PC/product(3).jpg" alt="">
+              <img src="image/PC/product(3).jpg" alt="化粧品">
             </div>
           </div>
           <div class="products-right">

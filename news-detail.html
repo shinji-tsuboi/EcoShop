@@ -37,27 +37,30 @@
         </ul>
       </nav>
       <div class="right-area">
+        <div class="search" id="search-toggle">
+          <a href="javascript:void(0);">
+            <img src="image/PC/search.png" alt="検索">
+          </a>
+        </div>
+        <form action="#" class="search-form-pc" id="search-form">
+          <button type="submit" aria-label="検索"></button>
+          <label>
+            <input type="text" placeholder="キーワードを入力">
+          </label>
+        </form>
         <div class="cart">
           <a href="">
             <img src="image/PC/cart.png" alt="ショッピングカート">
           </a>
         </div>
-        <div class="search">
-          <a href="">
-            <img src="image/PC/search.png">
-          </a>
-        </div>
-        <!-- <div class="search-box" id="search-box">
-          <input type="text" placeholder="Search...">
-        </div> -->
       </div>
       <!-- SP用メニューボタン -->
-       <div class="btn-area">
-         <div class="openbtn">
-           <span></span>
-           <span></span>
-         </div>
-       </div>
+      <div class="btn-area">
+        <div class="openbtn">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
       <!-- SP用メニューリスト -->
       <nav class="nav-sp">
         <ul class="nav-menu-sp">
@@ -67,11 +70,15 @@
           <li><a href="news.html">NEWS</a></li>
           <li><a href="policy.html">POLICY</a></li>
           <li><a href="contact.html">CONTACT</a></li>
-          <li class="search-sp"><img src="image/PC/search.png">
-            <div class="search-box" id="search-box">
-          <input type="text" placeholder="Search...">
-        </div>
+          <li class="search-sp" id="search-toggle-sp">
+            <img src="image/PC/search.png" alt="検索">
           </li>
+          <form action="#" class="search-form-sp" id="search-form-sp">
+            <button type="submit" aria-label="検索"></button>
+            <label>
+              <input type="text" placeholder="キーワードを入力">
+            </label>
+          </form>
         </ul>
       </nav>
     </div>
@@ -82,10 +89,10 @@
     <!-- subpage-top -->
     <div class="product-head">
       <div class="news-image">
-        <img src="image/PC/news-head.jpg">
+        <img src="image/PC/news-head.jpg" alt="ニュース">
       </div>
       <div class="news-image-sp">
-        <img src="image/SP/news-head.jpg">
+        <img src="image/SP/news-head.jpg" alt="ニュース">
       </div>
     </div>
     <!-- /subpage-top -->
@@ -125,7 +132,7 @@
       <div class="news-inner detail-inner">
         <div class="news-img detail-img">
           <h2>メディア掲載</h2>
-          <img src="image/PC/cta.jpg">
+          <img src="image/PC/cta.jpg" alt="ニュース">
         </div>
         <div class="archive archive-detail">
           <div class="archive-title">

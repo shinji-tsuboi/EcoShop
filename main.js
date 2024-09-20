@@ -156,3 +156,21 @@ window.onclick = function(event) {
     document.body.style.overflow = 'auto'; // スクロールを有効に戻す
   }
 }
+
+document.getElementById('search-toggle').addEventListener('click', function() {
+  const searchForm = document.getElementById('search-form');
+  if (searchForm.style.display === 'block') {
+    searchForm.style.display = 'none'; // 非表示
+  } else {
+    searchForm.style.display = 'flex'; // 表示
+  }
+});
+
+document.getElementById('search-toggle-sp').addEventListener('click', function() {
+  const searchForm = document.getElementById('search-form-sp');
+  if (searchForm.style.display === 'block') {
+    searchForm.style.display = 'none'; // 非表示
+  } else {
+    searchForm.style.display = 'flex'; // 表示
+  }
+});

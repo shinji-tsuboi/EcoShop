@@ -37,19 +37,22 @@
         </ul>
       </nav>
       <div class="right-area">
+        <div class="search" id="search-toggle">
+          <a href="javascript:void(0);">
+            <img src="image/PC/search.png" alt="検索">
+          </a>
+        </div>
+        <form action="#" class="search-form-pc" id="search-form">
+          <button type="submit" aria-label="検索"></button>
+          <label>
+            <input type="text" placeholder="キーワードを入力">
+          </label>
+        </form>
         <div class="cart">
           <a href="">
             <img src="image/PC/cart.png" alt="ショッピングカート">
           </a>
         </div>
-        <div class="search">
-          <a href="">
-            <img src="image/PC/search.png">
-          </a>
-        </div>
-        <!-- <div class="search-box" id="search-box">
-          <input type="text" placeholder="Search...">
-        </div> -->
       </div>
       <!-- SP用メニューボタン -->
       <div class="btn-area">
@@ -67,11 +70,15 @@
           <li><a href="news.html">NEWS</a></li>
           <li><a href="policy.html">POLICY</a></li>
           <li><a href="contact.html">CONTACT</a></li>
-          <li class="search-sp"><img src="image/PC/search.png">
-            <div class="search-box" id="search-box">
-              <input type="text" placeholder="Search...">
-            </div>
+          <li class="search-sp" id="search-toggle-sp">
+            <img src="image/PC/search.png" alt="検索">
           </li>
+          <form action="#" class="search-form-sp" id="search-form-sp">
+            <button type="submit" aria-label="検索"></button>
+            <label>
+              <input type="text" placeholder="キーワードを入力">
+            </label>
+          </form>
         </ul>
       </nav>
     </div>
@@ -84,31 +91,31 @@
       <!-- PCメインビジュアル -->
       <div class="main-visual">
         <div class="fv">
-          <img src="image/PC/FV-img01.jpg" alt="">
+          <img src="image/PC/FV-img01.jpg" alt="メインビジュアル">
         </div>
         <div class="fv">
-          <img src="image/PC/FV-img02.jpg" alt="">
+          <img src="image/PC/FV-img02.jpg" alt="メインビジュアル">
         </div>
         <div class="fv">
-          <img src="image/PC/FV-img03.jpg" alt="">
+          <img src="image/PC/FV-img03.jpg" alt="メインビジュアル">
         </div>
         <div class="fv">
-          <img src="image/PC/FV-img04.jpg" alt="">
+          <img src="image/PC/FV-img04.jpg" alt="メインビジュアル">
         </div>
       </div>
       <!-- SPメインビジュアル -->
       <div class="main-visual-sp">
         <div class="fv">
-          <img src="image/SP/FV-img01.jpg">
+          <img src="image/SP/FV-img01.jpg" alt="メインビジュアル">
         </div>
         <div class="fv">
-          <img src="image/SP/FV-img02.jpg">
+          <img src="image/SP/FV-img02.jpg" alt="メインビジュアル">
         </div>
         <div class="fv">
-          <img src="image/SP/FV-img03.jpg">
+          <img src="image/SP/FV-img03.jpg" alt="メインビジュアル">
         </div>
         <div class="fv">
-          <img src="image/SP/FV-img04.jpg">
+          <img src="image/SP/FV-img04.jpg" alt="メインビジュアル">
         </div>
       </div>
       <!-- News -->
@@ -153,13 +160,19 @@
       <div class="product-container">
         <ul class="product-item">
           <li class="product-1">
-            <img src="image/PC/beauty.jpg" alt="美容製品">
+            <a href="product.html">
+              <img src="image/PC/beauty.jpg" alt="美容製品">
+            </a>
           </li>
           <li class="product-2">
-            <img src="image/PC/fashion.jpg" alt="衣類製品">
+            <a href="product.html">
+              <img src="image/PC/fashion.jpg" alt="衣類製品">
+            </a>
           </li>
           <li class="product-3">
-            <img src="image/PC/food.jpg" alt="食品">
+            <a href="product.html">
+              <img src="image/PC/food.jpg" alt="食品">
+            </a>
           </li>
         </ul>
       </div>
@@ -167,6 +180,10 @@
 
     <!-- shopping -->
     <section id="shopping">
+      <div class="section-title">
+        <h2>SHOP</h2>
+        <h4>環境にやさしいサステナブル商品</h4>
+      </div>
       <div class="container">
         <div class="category-title-sp">
           <h2>BEAUTY</h2>
@@ -185,18 +202,16 @@
               <li>
                 <img src="image/shop/item (1).jpg">
                 <p>ピュアリーフスムースミルク</p>
-                <p>乳液（エマルジョン）</p>
                 <p>&yen; 2,000</p>
               </li>
               <li>
                 <img src="image/shop/item (2).jpg">
                 <p>グリーンレーヴフェイスクリーム</p>
-                <p>フェイスクリーム</p>
                 <p>&yen; 2,000</p>
               </li>
             </ul>
             <div class="button">
-              <a class="btn" href="#">詳しく</a>
+              <a class="btn" href="product.html">詳しく</a>
             </div>
           </div>
         </div>
@@ -217,20 +232,18 @@
             </div>
             <ul class="category-item">
               <li>
-                <img src="image/shop/item (4).jpg">
+                <img src="image/shop/item (4).jpg" alt="衣類">
                 <p>ナチュラルカーディガン</p>
-                <p>カーディガン</p>
                 <p>&yen; 2,000</p>
               </li>
               <li>
-                <img src="image/shop/item (5).jpg">
+                <img src="image/shop/item (5).jpg" alt="衣類">
                 <p>エコリーフ ハット</p>
-                <p>帽子</p>
                 <p>&yen; 2,000</p>
               </li>
             </ul>
             <div class="button">
-              <a class="btn" href="#">詳しく</a>
+              <a class="btn" href="product.html">詳しく</a>
             </div>
           </div>
         </div>
@@ -251,20 +264,18 @@
             </div>
             <ul class="category-item">
               <li>
-                <img src="image/shop/item (7).jpg">
+                <img src="image/shop/item (7).jpg" alt="食品">
                 <p>エコスイート クッキー</p>
-                <p>クッキー</p>
                 <p>&yen; 1,000</p>
               </li>
               <li>
-                <img src="image/shop/item (8).jpg">
+                <img src="image/shop/item (8).jpg" alt="食品">
                 <p>ナチュラルカカオ チョコレート</p>
-                <p>チョコレート</p>
                 <p>&yen; 1,000</p>
               </li>
             </ul>
             <div class="button">
-              <a class="btn" href="#">詳しく</a>
+              <a class="btn" href="product.html">詳しく</a>
             </div>
           </div>
         </div>
@@ -281,30 +292,30 @@
         <div class="about-image">
           <div class="about-visual">
             <div>
-              <img src="image/PC/about-slider (1).jpg" alt="">
+              <img src="image/PC/about-slider (1).jpg" alt="スライダー">
             </div>
             <div>
-              <img src="image/PC/about-slider (2).jpg" alt="">
+              <img src="image/PC/about-slider (2).jpg" alt="スライダー">
             </div>
             <div>
-              <img src="image/PC/about-slider (3).jpg" alt="">
+              <img src="image/PC/about-slider (3).jpg" alt="スライダー">
             </div>
             <div>
-              <img src="image/PC/about-slider (4).jpg" alt="">
+              <img src="image/PC/about-slider (4).jpg" alt="スライダー">
             </div>
             <div>
-              <img src="image/PC/about-slider (5).jpg" alt="">
+              <img src="image/PC/about-slider (5).jpg" alt="スライダー">
             </div>
             <div>
-              <img src="image/PC/about-slider (6).jpg" alt="">
+              <img src="image/PC/about-slider (6).jpg" alt="スライダー">
             </div>
           </div>
         </div>
         <div class="about-text">
           <p>
             私たちのビジョンは
-            人や環境、社会に良い影響を与える活動を応援し、<br>
-            みんながもっと主体的な人生を楽しめるようにお手伝いすることです。<br>
+            人や環境、社会に良い影響を与える活動を応援し、
+            みんながもっと主体的な人生を楽しめるようにお手伝いすることです。
             これからも世界中の素敵なアイテムに光を当てて、
             心が温まる商品をお届けしていきます。
           </p>
@@ -356,7 +367,9 @@
           </ul>
         </div>
         <div class="footer-item">
-          <h4>SNS</h4>
+          <a href="#">
+            <h4>SNS</h4>
+          </a>
           <ul>
             <li>INSTAGRAM</li>
             <li>X</li>
@@ -367,7 +380,7 @@
       <div class="footer-logo-area">
         <div class="footer-logo">
           <a href="#">
-            <img src="image/PC/logo.jpg">
+            <img src="image/PC/logo.jpg" alt="ロゴ">
           </a>
         </div>
         <div class="company-container">

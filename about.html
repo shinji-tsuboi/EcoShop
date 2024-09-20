@@ -37,27 +37,30 @@
         </ul>
       </nav>
       <div class="right-area">
+        <div class="search" id="search-toggle">
+          <a href="javascript:void(0);">
+            <img src="image/PC/search.png" alt="検索">
+          </a>
+        </div>
+        <form action="#" class="search-form-pc" id="search-form">
+          <button type="submit" aria-label="検索"></button>
+          <label>
+            <input type="text" placeholder="キーワードを入力">
+          </label>
+        </form>
         <div class="cart">
           <a href="">
             <img src="image/PC/cart.png" alt="ショッピングカート">
           </a>
         </div>
-        <div class="search">
-          <a href="">
-            <img src="image/PC/search.png">
-          </a>
-        </div>
-        <!-- <div class="search-box" id="search-box">
-          <input type="text" placeholder="Search...">
-        </div> -->
       </div>
       <!-- SP用メニューボタン -->
-       <div class="btn-area">
-         <div class="openbtn">
-           <span></span>
-           <span></span>
-         </div>
-       </div>
+      <div class="btn-area">
+        <div class="openbtn">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
       <!-- SP用メニューリスト -->
       <nav class="nav-sp">
         <ul class="nav-menu-sp">
@@ -67,11 +70,15 @@
           <li><a href="news.html">NEWS</a></li>
           <li><a href="policy.html">POLICY</a></li>
           <li><a href="contact.html">CONTACT</a></li>
-          <li class="search-sp"><img src="image/PC/search.png">
-            <div class="search-box" id="search-box">
-          <input type="text" placeholder="Search...">
-        </div>
+          <li class="search-sp" id="search-toggle-sp">
+            <img src="image/PC/search.png" alt="検索">
           </li>
+          <form action="#" class="search-form-sp" id="search-form-sp">
+            <button type="submit" aria-label="検索"></button>
+            <label>
+              <input type="text" placeholder="キーワードを入力">
+            </label>
+          </form>
         </ul>
       </nav>
     </div>
@@ -114,7 +121,7 @@
         </div>
         <div class="vision-left">
           <div class="vision-img">
-            <img src="image/PC/about-img.jpg" alt="">
+            <img src="image/PC/about-img.jpg" alt="私たちについて">
           </div>
         </div>
         <div class="vision-right">
@@ -149,7 +156,7 @@
         </div>
         <div class="sustainable-text">
           <P>
-            私たちは、お客様との長いお付き合いを大切にし、環境に優しいサステナブルな商品を通じて、<br>再生可能資源やリサイクル素材を活用した選択肢を提供しています。
+            私たちは、お客様との長いお付き合いを大切にし、環境に優しいサステナブルな商品を通じて、再生可能資源やリサイクル素材を活用した選択肢を提供しています。
           </P>
           <p>
             お客様の満足が私たちの励みとなり、そのご満足がさらに良いサービスを生み出すと信じています。
@@ -176,7 +183,7 @@
               </tr>
               <tr>
                 <th>所在地：</th>
-                <td>〒000-0000　東京都港区芝公園0-0-0</td>
+                <td>〒000-0000 東京都港区芝公園0-0-0</td>
               </tr>
               <tr>
                 <th>設立：</th>
@@ -184,7 +191,7 @@
               </tr>
               <tr>
                 <th>代表取締役：</th>
-                <td>田中　真美子</td>
+                <td>田中 真美子</td>
               </tr>
               <tr>
                 <th>事業内容：</th>
