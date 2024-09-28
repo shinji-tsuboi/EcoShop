@@ -25,7 +25,7 @@ img {
 
 /* パンくずリスト */
 
-.breadcrumb {
+.breadcrumbs {
   display: flex;
   gap: 12px;
   margin-top: 32px;
@@ -125,12 +125,13 @@ p {
   border: 1px solid #777777;
   border-radius: 3px;
   transition: all 0.3s ease; /* スムーズに表示されるように */
+  height: 45px;
 }
 
 .search-form-pc input {
   width: 200px;
   height: 45px;
-  padding: 5px 15px 5px 0;
+  padding: 25px 15px 5px 0;
   border: none;
   box-sizing: border-box;
   font-size: 1em;
@@ -318,19 +319,20 @@ p {
 }
 
 .search-form-sp {
-  display: none; /* 初期状態では非表示 */
+  display: none; /*初期状態では非表示 */
   flex-direction: row; /* 横並びに設定 */
   align-items: center;
   overflow: hidden;
   border: 1px solid #777777;
   border-radius: 3px;
   transition: all 0.3s ease; /* スムーズに表示されるように */
+  height: 45px;
 }
 
 .search-form-sp input {
   width: 200px;
   height: 45px;
-  padding: 5px 15px 5px 0;
+  padding: 25px 15px 5px 0;
   border: none;
   box-sizing: border-box;
   font-size: 1em;
@@ -415,6 +417,10 @@ p {
   display: none;
 }
 
+.main-visual-sp {
+  display: none;
+}
+
 .fv img {
   object-fit: cover;
   height: calc(100vh - 100px);
@@ -483,7 +489,7 @@ p {
 
 .news {
   position: fixed;
-  top: 88%;
+  top: 90%;
   left: 5%;
   width: 500px;
   height: 400px;
@@ -497,18 +503,10 @@ p {
   font-weight: normal;
 }
 
-@media (max-width: 1024px) {
-  .news {
-    position: fixed;
-    top: 90%;
-    left: 5%;
-    width: 500px;
-    height: 400px;
-    overflow: hidden;
-    color: #fff;
-    text-shadow: 2px 2px 9px rgba(0, 0, 0, 0.9);
-    z-index: -1;
-  }
+.news-text p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 768px) {
@@ -516,7 +514,7 @@ p {
     position: fixed;
     top: 90%;
     left: 5%;
-    width: 500px;
+    width: 400px;
     height: 400px;
     overflow: hidden;
     color: #fff;
@@ -1526,7 +1524,7 @@ span {
   position: relative;
 }
 
-#products::before {
+.shop::before {
   content: "SHOPPING";
   font-size: 100px;
   color: #96c519;
@@ -1627,11 +1625,9 @@ span {
     left: 45px;
   }
 
-  #products::before {
+  .shop::before {
     content: "SHOPPING";
     font-size: 60px;
-    color: #96c519;
-    opacity: .2;
     position: absolute;
     top: -90px;
     left: 20px;
@@ -1695,6 +1691,7 @@ span {
   top: -135px;
   left: -40px;
 }
+
 .head-beauty::after {
   position: absolute;
   content: "cosmetics";
@@ -1705,11 +1702,51 @@ span {
   right: 25px;
 }
 
-/* .item-category-name {
+.head-fashion {
+  position: relative;
+}
+
+.head-fashion::before {
+  position: absolute;
+  content: "sustainable";
+  font-size: 64px;
   color: #96c519;
-  font-size: 40px;
-  opacity: 0.4;
-} */
+  opacity: 0.2;
+  top: -135px;
+  left: -40px;
+}
+.head-fashion::after {
+  position: absolute;
+  content: "fashion";
+  font-size: 64px;
+  color: #96c519;
+  opacity: 0.2;
+  top: -70px;
+  right: 25px;
+}
+
+.head-food {
+  position: relative;
+}
+
+.head-food::before {
+  position: absolute;
+  content: "sustainable";
+  font-size: 64px;
+  color: #96c519;
+  opacity: 0.2;
+  top: -135px;
+  left: -40px;
+}
+.head-food::after {
+  position: absolute;
+  content: "food";
+  font-size: 64px;
+  color: #96c519;
+  opacity: 0.2;
+  top: -70px;
+  right: 25px;
+}
 
 .item-category {
   font-size: 32px;
@@ -1962,7 +1999,7 @@ span {
   }
 
   .news-category {
-    width: 75%;
+    width: 30%;
   }
 
   .category-list {
@@ -1974,6 +2011,10 @@ span {
     cursor: pointer;
   }
 
+  .category-list h2 {
+    color: #96c519;
+  }
+
   .news-category li {
     margin-top: 24px;
   }
@@ -1982,7 +2023,6 @@ span {
     display: flex;
     gap: 48px 40px;
     padding: 40px 0;
-    border-top: 1px solid #b0b2af;
     position: relative;
   }
 
@@ -2012,6 +2052,7 @@ span {
   .archive {
     flex-direction: column;
     width: 50%;
+    margin-top: 53px;
     position: relative;
   }
 
@@ -2039,7 +2080,7 @@ span {
   .news-btn {
     display: block;
     margin-top: 24px;
-    border: 1px solid #b0b2af;
+    border: 1px solid #96c519;
     padding: 8px 36px;
     border-radius: 10px;
     color: #676767;
@@ -2048,9 +2089,15 @@ span {
     right: 20px;
   }
 
-  .page-nation {
+  .pagination {
+    display: flex;
     margin-top: 64px;
-    text-align: center;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .pagination a {
+    color: #468459;
   }
 
   /* SP表示 */
@@ -2117,6 +2164,7 @@ span {
 
     .archive {
       width: 100%;
+      margin-top: 0;
     }
 
     .news-btn {
@@ -2145,7 +2193,7 @@ span {
 
 .detail-inner {
   flex-direction: column;
-  width: 80%;
+  width: 100%;
 }
 
 .detail-img {
@@ -2154,6 +2202,14 @@ span {
 
 .archive-detail {
   width: 100%;
+}
+
+.news-detail-btn {
+  border: 1px solid #96c519;
+  padding: 8px 36px;
+  border-radius: 10px;
+  color: #676767;
+  margin-top: 48px;
 }
 
 /* SP表示 */
@@ -2251,26 +2307,9 @@ span {
   font-size: 18px;
 }
 
-.form-area {
-  width: 100%;
-  margin-bottom: 48px;
-}
-
 .contact-heading {
   font-weight: bold;
   margin-bottom: 16px;
-}
-
-.input {
-  width: 100%;
-}
-
-.input-area {
-  width: 100%;
-  height: 44px;
-  border: 1px solid #808080;
-  display: flex;
-  padding: 10px;
 }
 
 select {
@@ -2280,13 +2319,6 @@ select {
 
 option {
   padding-right: 20px;
-}
-
-.contact-textarea {
-  width: 100%;
-  height: 140px;
-  border: 1px solid #808080;
-  padding: 10px;
 }
 
 .send {
@@ -2306,61 +2338,25 @@ option {
   transform: scale(1.2);
 }
 
-.wpforms-container textarea.wpforms-field-medium {
+input,
+textarea {
   width: 100%;
-  height: 140px;
-  border: 1px solid #808080;
-  padding: 10px;
+  border: solid 1px #c8c8c8;
+  padding: 8px;
+  margin-bottom: 20px;
 }
-
-.wpforms-container .wpforms-submit-container {
-  text-align: -webkit-center;
-}
-
-.wpforms-submit {
-  background: #468459 !important;
-  width: 240px !important;
-  height: 48px !important;
-  border-radius: 4px !important;
+input[type="submit"] {
+  background-color: #96c519;
   color: #fff;
-  margin-top: 48px !important;
-  margin-bottom: 80px !important;
+  padding: 15px 0;
 }
 
-div.wpforms-container-full button[type=submit]:hover {
-  background-color: #468459 !important;
-  opacity: 0.7 !important;
+input[type="submit"]:hover {
+  opacity: 0.7;
 }
 
-div.wpforms-container-full button[type=submit]:active {
-  background-color: #468459 !important;
-}
-
-::placeholder {
-  color: #aaa;
-}
-
-.worries {
-  position: relative;
-}
-
-.worries::after {
-  content: "";
-  position: absolute;
-  top: 55px;
-  right: 16px;
-  width: 12px;
-  height: 12px;
-  border-right: 2px solid #333;
-  border-bottom: 2px solid #333;
-  transform: rotate(45deg);
-  pointer-events: none;
-}
-
-select {
-  -webkit-appearance: none;
-  appearance: none;
-  color: #0000005C;
+.wpcf7-form-control-wrap {
+  padding: 0;
 }
 
 /* SP表示 */

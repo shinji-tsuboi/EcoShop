@@ -1,9 +1,17 @@
 $(document).ready(function() {
+  console.log("jQuery is working! Version: " + jQuery.fn.jquery);
+});
+
+
+$(document).ready(function() {
   // メニューボタンがクリックされたときの処理
   $(".openbtn").click(function () {
     $(this).toggleClass('active');
     $('.nav-sp').toggleClass('panelactive');
     $('.nav-menu-sp').toggleClass('panelactive');
+
+    console.log('nav-sp active:', $('.nav-sp').hasClass('panelactive')); // 追加
+    console.log('nav-menu-sp active:', $('.nav-menu-sp').hasClass('panelactive')); // 追加
   });
 
   // ナビメニュー内のリンクがクリックされたときの処理
@@ -15,7 +23,7 @@ $(document).ready(function() {
 });
 
 // スライダー設定
-$(function() {
+$(document).ready(function() {
   $('.main-visual').slick({
     autoplay: true,
     autoplaySpeed: 5000,
@@ -25,8 +33,8 @@ $(function() {
     arrows: false,
     infinite: true,
   });
-});
-$(function() {
+
+  // スマホ版のスライダー設定
   $('.main-visual-sp').slick({
     autoplay: true,
     autoplaySpeed: 5000,
@@ -38,6 +46,7 @@ $(function() {
   });
 });
 
+//ABOUTセクションのスライダー
 $(function () {
   $(".about-visual")
     // 最初のスライドに"add-animation"のclassを付ける(data-slick-index="0"が最初のスライドを指す)
