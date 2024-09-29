@@ -3,7 +3,9 @@
 // CSSファイル読み込み
 function my_enqueue_styles() {
   // RessのCSSを読み込む
-  wp_enqueue_style('ress', '//unpkg.com/ress/dist/ress.min.css', array(), null, 'all');
+  wp_enqueue_style('ress', '//unpkg.com/ress/dist/ress.min.css', array(), false, 'all');
+  wp_enqueue_style('style', get_stylesheet_uri(), array('ress'), false, 'all');
+  // add_action('wp_enqueue_scripts', 'my_enqueue_styles');
 
   // SlickのCSSを読み込む
   wp_enqueue_style('slick-css', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css', array(), null, 'all');
@@ -17,11 +19,12 @@ add_action('wp_enqueue_scripts', 'my_enqueue_styles');
 
 // JSファイル読み込み
 function st_enqueue_scripts() {
-  // jQueryの読み込み（必要に応じて）
+  // jQueryの読み込み
   wp_deregister_script('jquery');
   wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', array(), '3.7.1', true);
 
   // SlickのCSSとJSを読み込む
+  wp_enqueue_style('slick-css', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
   wp_enqueue_script('slick-js', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', array('jquery'), '1.8.1', true);
 
   // 自作のスクリプトを読み込む
@@ -129,3 +132,13 @@ function create_food_post_type() {
   );
 }
 add_action('init', 'create_food_post_type');
+
+// 超重要
+function post_has_archive( $args, $post_type ) {
+	if ( 'post' == $post_type ) {
+		$args['rewrite'] = true;
+		$args['has_archive'] = 'news'; //任意のスラッグ名
+	}
+	return $args;
+}
+add_filter( 'register_post_type_args', 'post_has_archive', 10, 2 );

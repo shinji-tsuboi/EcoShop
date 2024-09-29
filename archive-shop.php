@@ -39,7 +39,8 @@
                 <li class="item-box">
                   <img src="<?php the_field('pic'); ?>">
                   <h2><?php the_field('item'); ?></h2>
-                  <p>&yen; <?php the_field('price'); ?></p>
+                  <p>&yen; <?php the_field('price'); ?><span class="tax">(税込み)</span></p>
+                  <p><?php the_field('features'); ?></p>
                 </li>
               </a>
 
@@ -56,7 +57,7 @@
                         <div class="item-head head-beauty">
                           <h2 class="item-title"><?php the_field('item'); ?></h2>
                           <p class="item-type"><?php the_field('category'); ?></p>
-                          <p class="item-price">&yen;<?php the_field('price'); ?></p>
+                          <p class="item-price">&yen;<?php the_field('price'); ?><span class="tax">(税込み)</span></p>
                         </div>
                       </div>
                       <div class="container-bottom">
@@ -139,7 +140,8 @@
                 <li class="item-box">
                   <img src="<?php the_field('pic'); ?>">
                   <h2><?php the_field('item'); ?></h2>
-                  <p>&yen; <?php the_field('price'); ?></p>
+                  <p>&yen; <?php the_field('price'); ?><span class="tax">(税込み)</span></p>
+                  <p><?php the_field('features'); ?></p>
                 </li>
               </a>
 
@@ -156,7 +158,7 @@
                         <div class="item-head head-fashion">
                           <h2 class="item-title"><?php the_field('item'); ?></h2>
                           <p class="item-type"><?php the_field('category'); ?></p>
-                          <p class="item-price">&yen;<?php the_field('price'); ?></p>
+                          <p class="item-price">&yen;<?php the_field('price'); ?><span class="tax">(税込み)</span></p>
                         </div>
                       </div>
                       <div class="container-bottom">
@@ -238,7 +240,8 @@
                 <li class="item-box">
                   <img src="<?php the_field('pic'); ?>">
                   <h2><?php the_field('item'); ?></h2>
-                  <p>&yen; <?php the_field('price'); ?></p>
+                  <p>&yen; <?php the_field('price'); ?><span class="tax">(税込み)</span></p>
+                  <p><?php the_field('features'); ?></p>
                 </li>
               </a>
 
@@ -255,7 +258,7 @@
                         <div class="item-head head-food">
                           <h2 class="item-title"><?php the_field('item'); ?></h2>
                           <p class="item-type"><?php the_field('category'); ?></p>
-                          <p class="item-price">&yen;<?php the_field('price'); ?></p>
+                          <p class="item-price">&yen;<?php the_field('price'); ?><span class="tax">(税込み)</span></p>
                         </div>
                       </div>
                       <div class="container-bottom">

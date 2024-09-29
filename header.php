@@ -13,11 +13,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/style.css'); ?>">
-
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
   <?php wp_head(); ?>
 </head>
 
@@ -35,7 +32,7 @@
           <li><a href="<?php echo esc_url(home_url('/product')); ?>">PRODUCT</a></li>
           <li><a href="<?php echo esc_url(home_url('/shop')); ?>">SHOP</a></li>
           <li><a href="<?php echo esc_url(home_url('/about')); ?>">ABOUT</a></li>
-          <li><a href="<?php echo esc_url(home_url('/category/news')); ?>">NEWS</a></li>
+          <li><a href="<?php echo esc_url(home_url('/news')); ?>">NEWS</a></li>
         </ul>
       </nav>
       <div class="right-area">
@@ -69,18 +66,19 @@
           <li><a href="<?php echo esc_url(home_url('/product')); ?>">PRODUCT</a></li>
           <li><a href="<?php echo esc_url(home_url('/shop')); ?>">SHOP</a></li>
           <li><a href="<?php echo esc_url(home_url('/about')); ?>">ABOUT</a></li>
-          <li><a href="<?php echo esc_url(home_url('/category/news')); ?>">NEWS</a></li>
+          <li><a href="<?php echo esc_url(home_url('/news')); ?>">NEWS</a></li>
           <li><a href="<?php echo esc_url(home_url('/policy')); ?>">POLICY</a></li>
           <li><a href="<?php echo esc_url(home_url('/contact')); ?>">CONTACT</a></li>
           <li class="search-sp" id="search-toggle-sp">
             <img src="<?php echo get_template_directory_uri(); ?>/image/PC/search.png" alt="検索">
           </li>
-          <form action="#" class="search-form-sp" id="search-form-sp">
+          <form action="<?php echo esc_url(home_url('/')); ?>" method="get" class="search-form-sp" id="search-form-sp">
             <button type="submit" aria-label="検索"></button>
             <label>
-              <input type="text" placeholder="キーワードを入力">
+              <input type="text" name="s" placeholder="キーワードを入力" required>
             </label>
           </form>
+
         </ul>
       </nav>
     </div>

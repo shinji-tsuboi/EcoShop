@@ -24,7 +24,7 @@
           <h3>お問い合わせフォーム</h3>
           <p>※ 2営業日以内にご返信いたします。</p>
         </div>
-        <?php echo apply_shortcodes( '[contact-form-7 id="2de0e30" title="コンタクトフォーム 1"]' ); ?>
+        <?php echo apply_shortcodes( '[contact-form-7 id="3d5d902" title="contact"]' ); ?>
       </div>
     </section>
   </main>

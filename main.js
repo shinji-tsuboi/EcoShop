@@ -183,3 +183,18 @@ document.getElementById('search-toggle-sp').addEventListener('click', function()
     searchForm.style.display = 'flex'; // 表示
   }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const productItems = document.querySelectorAll('.product-item li');
+
+    productItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-target');
+            const targetSection = document.getElementById(targetId);
+
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+});

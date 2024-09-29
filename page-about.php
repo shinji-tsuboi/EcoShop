@@ -13,7 +13,7 @@
     <!-- /subpage-top -->
 
     <!-- パンくずリスト -->
-    
+
     <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
       <?php if(function_exists('bcn_display'))
       {
@@ -75,7 +75,7 @@
           </p>
         </div>
         <div class="sustainable-img">
-          <img src="image/PC/about-slider (1).jpg">
+          <img src="<?php echo get_template_directory_uri(); ?>/image/PC/about-slider (1).jpg">
         </div>
       </div>
 
@@ -108,8 +108,15 @@
               </tr>
             </tbody>
           </table>
+          <p class="other">サステナブル商品は、環境への影響を抑え、倫理的に生産されています。再生可能資源やリサイクル素材を使用し、持続可能な未来を支援します。</p>
+          <p class="reception">受付時間 : 火曜日を除く 10:00〜18:00
+          </p>
+        </div>
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6483.57409645012!2d139.74810705000002!3d35.65761795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbe9029c3ff%3A0x6b5cf959a2346d3f!2z44CSMTA1LTAwMTEg5p2x5Lqs6YO95riv5Yy66Iqd5YWs5ZyS!5e0!3m2!1sja!2sjp!4v1727569856349!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
+
     </section>
 
 

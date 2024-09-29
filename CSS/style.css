@@ -36,6 +36,11 @@ p {
   color: #1c1c1c;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 /*---------------------------------
 　Header
 ---------------------------------*/
@@ -88,6 +93,11 @@ p {
   /* アンダーラインの色 */
   transition: width 0.5s ease;
   /* アンダーラインの幅をアニメーションさせる */
+}
+
+.nav-item li:hover {
+  color: #96c519;
+  transition: 0.3s ease;
 }
 
 .nav-item li:hover::after {
@@ -281,6 +291,11 @@ p {
 .nav-menu-sp a:hover::after {
   width: 100%;
   /* ホバー時に幅を100%に設定 */
+}
+
+.nav-menu-sp a:hover {
+  color: #96c519;
+  transition: 0.3s ease;
 }
 
 .nav-menu-sp a {
@@ -709,6 +724,15 @@ span {
   font-size: 12px;
   transition: all .3s ease 0s;
   justify-content: center;
+  position: relative;
+}
+
+.btn::after {
+  position: absolute;
+  content: ">";
+  font-size: 18px;
+  top: 6px;
+  right: 40px;
 }
 
 .btn:hover {
@@ -883,6 +907,10 @@ span {
   /* ホバー時に幅を100%に設定 */
 }
 
+.footer-item h4:hover {
+  color: #96c519;
+  transition: 0.3s ease;
+}
 
 .footer-item ul {
   margin-top: 10px;
@@ -1064,6 +1092,7 @@ span {
   margin-top: 240px;
   padding: 0 30px;
   position: relative;
+  display: flex;
 }
 
 .company::before {
@@ -1074,6 +1103,10 @@ span {
   position: absolute;
   top: -150px;
   left: 20px;
+}
+
+.company-container {
+  width: 100%;
 }
 
 .company-name {
@@ -1087,6 +1120,7 @@ span {
 .company-detail th {
   text-align: left;
   padding: 8px 15px;
+  width: 150px;
   border-bottom: 1px solid rgba(20, 20, 20, 0.07);
 }
 
@@ -1094,7 +1128,33 @@ span {
   border-bottom: 1px solid rgba(20, 20, 20, 0.07);
 }
 
+.other {
+  padding: 0 15px;
+  margin-top: 32px;
+}
+
+.reception {
+  padding: 0 15px;
+  margin-top: 32px;
+}
+
+.map {
+  padding-left: 30px;
+  /* overflow: hidden; */
+}
+
 /* SP表示 */
+
+@media (max-width: 1024px) {
+  .company {
+    flex-direction: column;
+  }
+
+  .map {
+    padding: 0 15px;
+    margin-top: 64px;
+  }
+}
 
 .subpage-img-sp {
   display: none;
@@ -1222,6 +1282,15 @@ span {
 
   .company-detail th {
     width: 40%;
+  }
+
+  .map {
+    overflow: hidden;
+  }
+
+  .map iframe {
+    width: 100%;
+    /* height: auto; */
   }
 }
 
@@ -1374,6 +1443,15 @@ span {
 
 .products-button {
   padding: 12px 64px;
+  position: relative;
+}
+
+.products-button::after {
+  position: absolute;
+  content: ">";
+  font-size: 18px;
+  top: 8px;
+  right: 40px;
 }
 
 /* SP表示 */
@@ -1580,10 +1658,19 @@ span {
   font-size: 20px;
 }
 
+.item-box h2:hover {
+  color: #96c519;
+  transition: 0.3s ease;
+}
+
 .item-box p {
   margin-top: 12px;
   margin-bottom: 12px;
   font-weight: normal;
+}
+
+.tax {
+  font-size: 12px;
 }
 
 /* SP表示 */
@@ -1960,6 +2047,38 @@ span {
     right: 10px;
     font-size: 32px;
   }
+
+  .head-beauty::before {
+    content: "cosmetics";
+    font-size: 40px;
+    top: -40px;
+    left: 0;
+  }
+
+  .head-beauty::after {
+    display: none;
+  }
+
+  .head-fashion::before {
+    content: "fashion";
+    font-size: 40px;
+    top: -40px;
+    left: 0;
+  }
+  .head-fashion::after {
+    display: none;
+  }
+
+  .head-food::before {
+    content: "food";
+    font-size: 40px;
+    top: -40px;
+    left: 0;
+  }
+
+  .head-food::after {
+    display: none;
+  }
 }
   /*---------------------------------
 　News Page
@@ -2000,6 +2119,7 @@ span {
 
   .news-category {
     width: 30%;
+    padding-top: 40px;
   }
 
   .category-list {
@@ -2008,10 +2128,30 @@ span {
   }
 
   .category-list li {
+    position: relative;
     cursor: pointer;
   }
 
-  .category-list h2 {
+  .category-list a {
+    position: relative;
+  }
+
+  .category-list a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 1px;
+    width: 0;
+    background: #96c519;
+    transition: width 0.3s;
+  }
+
+  .category-list a:hover::after {
+    width: 100%;
+  }
+
+  .news-category h2 {
     color: #96c519;
   }
 
@@ -2089,14 +2229,22 @@ span {
     right: 20px;
   }
 
-  .pagination {
+  .wp-pagenavi {
     display: flex;
     margin-top: 64px;
     justify-content: center;
     gap: 24px;
   }
 
-  .pagination a {
+  .wp-pagenavi span {
+    border: none;
+  }
+
+  .wp-pagenavi a {
+    border: none;
+  }
+
+  .current {
     color: #468459;
   }
 
@@ -2570,4 +2718,54 @@ input[type="submit"]:hover {
     top: 210px;
     left: 45px;
   }
+}
+
+/*---------------------------------
+　Search Page
+---------------------------------*/
+
+#search {
+  padding: 100px 30px 30px 30px;
+  display: flex;
+  gap: 64px;
+}
+
+.search-img {
+  width: 50%;
+}
+
+.search-result {
+  width: 45%;
+}
+
+.search-result h2 {
+  margin-bottom: 32px;
+}
+
+.search-result-list a {
+  display: inline-block;
+  margin-bottom: 24px;
+  font-size: 20px;
+}
+
+.search-result-list a:hover {
+  color: #96c519;
+
+}
+
+/* SP表示 */
+
+@media (max-width: 768px) {
+  #search {
+    flex-direction: column;
+  }
+
+  .search-img {
+    width: 100%;
+  }
+
+  .search-result {
+    width: 100%;
+  }
+
 }

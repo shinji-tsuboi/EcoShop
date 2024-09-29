@@ -27,13 +27,13 @@
       </div>
       <div class="product-container">
         <ul class="product-item">
-          <li class="product-1">
+          <li class="product-1" data-target="beauty-group">
             <img src="<?php echo get_template_directory_uri(); ?>/image/PC/beauty.jpg" alt="美容製品">
           </li>
-          <li class="product-2">
+          <li class="product-2" data-target="fashion-group">
             <img src="<?php echo get_template_directory_uri(); ?>/image/PC/fashion.jpg" alt="衣類製品">
           </li>
-          <li class="product-3">
+          <li class="product-3" data-target="food-group">
             <img src="<?php echo get_template_directory_uri(); ?>/image/PC/food.jpg" alt="食品">
           </li>
         </ul>
@@ -54,7 +54,7 @@
       </div>
 
       <!-- Beauty -->
-      <div class="category-container  beauty-container">
+      <div id="beauty-group" class="category-container beauty-container">
         <div class="group-title">
           <h3>BEAUTY</h3>
           <div class="concept">
@@ -83,14 +83,14 @@
               </div>
             </div>
             <div class="button">
-              <a class="btn  products-button" href="<?php echo esc_url(home_url('/shop#beauty-section')); ?>">商品一覧へ</a>
+              <a class="btn  products-button" href="<?php echo esc_url(home_url('/shop#beauty-section')); ?>">SHOP</a>
             </div>
           </div>
         </div>
       </div> <!-- /Beauty -->
 
       <!-- Fashion -->
-      <div class="category-container">
+      <div id="fashion-group" class="category-container">
         <div class="group-title">
           <h3>FASHION</h3>
           <div class="concept">
@@ -119,14 +119,14 @@
               </div>
             </div>
             <div class="button">
-              <a class="btn  products-button" href="<?php echo esc_url(home_url('/shop#fashion-section')); ?>">商品一覧へ</a>
+              <a class="btn  products-button" href="<?php echo esc_url(home_url('/shop#fashion-section')); ?>">SHOP</a>
             </div>
           </div>
         </div>
       </div> <!-- /Fashion -->
 
       <!-- Food -->
-      <div class="category-container">
+      <div id="food-group" class="category-container">
         <div class="group-title">
           <h3>FOOD</h3>
           <div class="concept">
@@ -155,7 +155,7 @@
               </div>
             </div>
             <div class="button">
-              <a class="btn products-button" href="<?php echo esc_url(home_url('/shop#food-section')); ?>">商品一覧へ</a>
+              <a class="btn products-button" href="<?php echo esc_url(home_url('/shop#food-section')); ?>">SHOP</a>
             </div>
           </div>
         </div>
