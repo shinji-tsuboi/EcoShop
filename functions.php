@@ -12,7 +12,7 @@ function my_enqueue_styles() {
   wp_enqueue_style('slick-theme-css', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css', array(), null, 'all');
 
   // テーマのカスタムスタイルを読み込む
-  wp_enqueue_style('custom-style', get_template_directory_uri() . '/css/style.css', array('ress'), null, 'all');
+  wp_enqueue_style('custom-style', get_template_directory_uri() . '/CSS/style.css', array('ress'), null, 'all');
 }
 add_action('wp_enqueue_scripts', 'my_enqueue_styles');
 

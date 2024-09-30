@@ -112,7 +112,7 @@
         </div>
         <div class="container-left">
           <div class="container-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/image/PC/product(1).jpg" alt="化粧品">
+            <img src="<?php echo get_template_directory_uri(); ?>/image/PC/product-1.jpg" alt="化粧品">
           </div>
         </div>
         <div class="container-right">
@@ -144,7 +144,7 @@
         </div>
         <div class="container-left">
           <div class="container-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/image/PC/product(2).jpg" alt="衣服">
+            <img src="<?php echo get_template_directory_uri(); ?>/image/PC/product-2.jpg" alt="衣服">
           </div>
         </div>
         <div class="container-right">
@@ -176,7 +176,7 @@
         </div>
         <div class="container-left">
           <div class="container-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/image/PC/product(3).jpg" alt="食品">
+            <img src="<?php echo get_template_directory_uri(); ?>/image/PC/product-3.jpg" alt="食品">
           </div>
         </div>
         <div class="container-right">

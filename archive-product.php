@@ -64,7 +64,7 @@
         <div class="products-inner">
           <div class="products-left">
             <div class="products-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/image/PC/product(1).jpg" alt="化粧品">
+              <img src="<?php echo get_template_directory_uri(); ?>/image/PC/product-1.jpg" alt="化粧品">
             </div>
           </div>
           <div class="products-right">
@@ -100,7 +100,7 @@
         <div class="products-inner reverse">
           <div class="products-left">
             <div class="products-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/image/PC/product(2).jpg" alt="化粧品">
+              <img src="<?php echo get_template_directory_uri(); ?>/image/PC/product-2.jpg" alt="化粧品">
             </div>
           </div>
           <div class="products-right">
@@ -136,7 +136,7 @@
         <div class="products-inner">
           <div class="products-left">
             <div class="products-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/image/PC/product(3).jpg" alt="化粧品">
+              <img src="<?php echo get_template_directory_uri(); ?>/image/PC/product-3.jpg" alt="化粧品">
             </div>
           </div>
           <div class="products-right">
