@@ -198,3 +198,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.getElementById('open-cart').onclick = function() {
+  document.getElementById('cart-iframe').style.display = 'block';
+};

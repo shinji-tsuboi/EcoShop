@@ -102,10 +102,10 @@
                       </div>
                       <div class="cart-area">
                         <div class="cart-box">
-                          <button type="submit" class="cart-button">
+                          <a href="<?php the_field('base'); ?>" target="_blank" class="cart-button">
                             <img src="<?php echo get_template_directory_uri(); ?>/image/PC/cart-white.png" class="cart">
                             <p>カートに入れる</p>
-                          </button>
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -203,10 +203,10 @@
                       </div>
                       <div class="cart-area">
                         <div class="cart-box">
-                          <button type="submit" class="cart-button">
+                          <a href="<?php the_field('base'); ?>" target="_blank" class="cart-button">
                             <img src="<?php echo get_template_directory_uri(); ?>/image/PC/cart-white.png" class="cart">
                             <p>カートに入れる</p>
-                          </button>
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -303,10 +303,10 @@
                       </div>
                       <div class="cart-area">
                         <div class="cart-box">
-                          <button type="submit" class="cart-button">
+                          <a href="<?php the_field('base'); ?>" target="_blank" class="cart-button">
                             <img src="<?php echo get_template_directory_uri(); ?>/image/PC/cart-white.png" class="cart">
                             <p>カートに入れる</p>
-                          </button>
+                          </a>
                         </div>
                       </div>
                     </div>
